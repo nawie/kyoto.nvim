@@ -1,4 +1,4 @@
-require("bufferline").setup({
+require("bufferline").setup {
   options = {
     mappings = true,
     show_close_icon = true,
@@ -14,4 +14,4 @@ require("bufferline").setup({
       return s
     end,
   },
-})
+}

@@ -1,5 +1,3 @@
-local vim = vim
-
 local function clock()
   return " " .. os.date("%H:%M")
 end

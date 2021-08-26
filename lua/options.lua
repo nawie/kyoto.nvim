@@ -1,51 +1,43 @@
-local vim = vim
-local g = vim.g
-local opt = vim.opt
-
-opt.ruler = false
-opt.hidden = true
-opt.ignorecase = true
-opt.splitbelow = true
-opt.splitright = true
-opt.termguicolors = true
-opt.cul = true
-opt.mouse = "a"
-opt.signcolumn = "yes"
-opt.cmdheight = 1
-opt.updatetime = 250 -- update interval for gitsigns
-opt.timeoutlen = 400
-opt.expandtab = true
-opt.shiftwidth = 2
-opt.smartindent = true
-opt.background = "dark"
-opt.whichwrap:append("<>hl")
-opt.pumheight = 20
-opt.foldmethod = "manual"
-vim.cmd("set wildcharm=<Tab>")
-
-vim.cmd("colorscheme tokyonight")
+vim.opt.hidden = true
+vim.opt.ignorecase = true
+vim.opt.termguicolors = true
+vim.opt.background = "dark"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.cursorline = true
+vim.opt.mouse = "a"
+vim.opt.signcolumn = "yes"
+vim.opt.foldmethod = "manual"
+vim.opt.timeoutlen = 400
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+vim.opt.whichwrap:append("<>hl")
+vim.opt.pumheight = 20
+vim.opt.updatetime = 250
 
 local disabled_built_ins = {
-  "netrw",
-  "netrwPlugin",
-  "netrwSettings",
-  "netrwFileHandlers",
-  "gzip",
-  "zip",
-  "zipPlugin",
-  "tar",
-  "tarPlugin",
-  "getscript",
-  "getscriptPlugin",
-  "vimball",
-  "vimballPlugin",
-  "2html_plugin",
-  "logipat",
-  "rrhelper",
-  "spellfile_plugin",
-  "matchit",
+	"netrw",
+	"netrwPlugin",
+	"netrwSettings",
+	"netrwFileHandlers",
+	"gzip",
+	"zip",
+	"zipPlugin",
+	"tar",
+	"tarPlugin",
+	"getscript",
+	"getscriptPlugin",
+	"vimball",
+	"vimballPlugin",
+	"2html_plugin",
+	"logipat",
+	"rrhelper",
+	"spellfile_plugin",
+	"matchit",
 }
 
 for _, plugin in pairs(disabled_built_ins) do
-  vim.g["loaded_" .. plugin] = 1
+	vim.g["loaded_" .. plugin] = 1
 end

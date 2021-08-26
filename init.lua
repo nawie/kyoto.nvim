@@ -1,37 +1,15 @@
-local vim = vim
-local g = vim.g
+--  _  __           _                    _           
+-- | |/ /   _  ___ | |_ ___   _ ____   _(_)_ __ ___  
+-- | ' / | | |/ _ \| __/ _ \ | '_ \ \ / / | '_ ` _ \ 
+-- | . \ |_| | (_) | || (_) || | | \ V /| | | | | | |
+-- |_|\_\__, |\___/ \__\___(_)_| |_|\_/ |_|_| |_| |_|
+-- 	|___/                                        
 
--- line-numbers must be declared before dashboard
--- init because otherwise dashboard shows line numbers
-vim.opt.nu = true
-vim.opt.rnu = true
+vim.g.mapleader = " "
 
-require("globals")
-require("plugins.dashboard-config")
-
--- autocomplete configuration
-require("plugins.compe-config")
--- Langauge server configuration
-require("lsp-config")
--- general configurations
 require("options")
--- lualine configuration
-require("plugins.statusline")
--- nvim-bufferline.lua configuration
-require("plugins.top-bufferline")
--- fuzzy finder configuration
-require("plugins.telescope-config")
--- Git changes(showing in line number) configuration
-require("plugins.gitsigns-config")
--- configuration to help you remember keybindings
-require("plugins.which-key-config")
--- nvim tree
-require("plugins.nvimtree-config")
--- extra plugins(with shorter configs)
-require("plugins.misc")
--- source our mappings last(may change)
-vim.cmd("source ~/.config/nvim/viml/maps.vim")
--- auto-commands
-vim.cmd("source ~/.config/nvim/viml/autocmd.vim")
--- user configurations
-require("kyotorc")
+require("plugins")
+require("maps")
+require("lsp")
+
+vim.cmd[[colorscheme tokyonight]]

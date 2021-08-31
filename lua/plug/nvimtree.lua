@@ -1,5 +1,6 @@
 local tree_cb = require "nvim-tree.config".nvim_tree_callback
 
+vim.g.nvim_tree_side = "right"
 vim.g.nvim_tree_add_trailing = 0
 vim.g.nvim_tree_allow_resize = 1
 vim.g.nvim_tree_auto_close = 0
